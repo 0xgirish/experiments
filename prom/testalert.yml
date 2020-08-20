@@ -1,0 +1,11 @@
+groups:
+- name: test-alert
+  rules:
+  - alert: TestAlert
+    expr: fx_step{service="test_service"} > 1
+    for: 1m
+    labels:
+      severity: warning
+    annotations:
+      summary: "[localhost] just a test."
+      description: "This is a simple test for sre-pager through alertmanager"

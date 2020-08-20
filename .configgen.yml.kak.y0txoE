@@ -1,0 +1,4 @@
+configMapGenerator:
+- name: prom-cm
+  files:
+  - prometheus.ymlj
